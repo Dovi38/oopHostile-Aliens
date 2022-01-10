@@ -1,0 +1,11 @@
+{
+  "name": "oop-hostile-aliens",
+  "version": "1.0.0",
+  "description": "build game using oop",
+  "main": "main.js",
+  "scripts": {
+    "test": "\"jest\""
+  },
+  "author": "Dovi",
+  "license": "ISC"
+}
