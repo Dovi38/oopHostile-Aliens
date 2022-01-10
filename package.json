@@ -4,8 +4,12 @@
   "description": "build game using oop",
   "main": "main.js",
   "scripts": {
-    "test": "\"jest\""
+    "test": "jest"
   },
   "author": "Dovi",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.16.7",
+    "jest": "^27.4.7"
+  }
 }

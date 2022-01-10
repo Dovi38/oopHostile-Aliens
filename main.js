@@ -1,29 +1,4 @@
-class Fleet {
-  constructor(type, id, hitPoints, loosePoints, image) {
-    this.type = type;
-    this.id = id;
-    this.hitPoints = hitPoints;
-    this.loosePoints = loosePoints;
-    this.image = image;
-  }
-  shipLife() {
-    return this.hitPoints -= this.loosePoints;
-  }
-  stopPoints() {
-    return;
-  }
-  getHtml() {
-    const shipHTML = 
-    `<div class="card">
-    <img src="${this.image}">
-    <div>
-    <p class="ship">${this.type}</p>
-    <p class="points" data-id="${this.id}">${this.hitPoints}</p>
-    </div>
-    </div>`
-    return shipHTML;
-  }
-}
+import {Fleet} from "./fleet.js"
 const motherShip = new Fleet('motherShip', 1, 100, 9, './img/alien.png', );
 
 const fleetShip = document.querySelector('.enemy-fleet');
@@ -81,7 +56,8 @@ const points = document.querySelectorAll('.points');
 }
 
 const message = document.querySelector('.note');
-const gameEnd = () => {
+
+export const gameEnd = () => {
   if(shipArray.length == 0)
   return message.innerHTML = 'HEY! GAME OVER';   
 }
@@ -95,7 +71,7 @@ const buttonAttack = document.querySelector('.attack-btn');
    reloadGame();
  })
  
- const reloadGame = () => {
+ export const reloadGame = () => {
    if(gameEnd()) {
     document.location.reload(true)
     document.location.reload(false);
