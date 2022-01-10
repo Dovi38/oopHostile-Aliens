@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+h1 {
+  font-family: 'Rubik Beastly', cursive;
+  font-size: 60px;
+  font-weight: 200;
+  text-align: center;
+  margin: 20px 0;
+}
+.grid {
+  border: 3px solid black;
+  background: rgb(105, 100, 100);
+  width: 600px;
+  height: 500px;
+  margin: auto;
+  position: relative;
+}
+.enemy-fleet {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  padding: 2px 7px;
+  text-align: center;
+  flex: 1 1 auto;
+}
+.note {
+  font-family: 'Rubik Beastly', cursive;
+  font-size: 60px;
+  font-weight: 200;
+  text-align: center;
+  margin: 20px 0;
+  position: absolute;
+  left: 50px;
+  bottom: 100px;
+}
+.player {
+  background-image: url('./img/space-ship1.png');
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  left: 270px;
+  bottom: 0px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.attack-btn {
+  font-size: 30px;
+  font-weight: bold;
+  background-color: rgb(223, 82, 82);
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  text-align: center;
+}
