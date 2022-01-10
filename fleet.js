@@ -13,7 +13,7 @@ export class Fleet {
     return;
   }
   getHtml() {
-    const shipHTML = 
+    const shipHtml = 
     `<div class="card">
     <img src="${this.image}">
     <div>
@@ -21,7 +21,7 @@ export class Fleet {
     <p class="points" data-id="${this.id}">${this.hitPoints}</p>
     </div>
     </div>`
-    return shipHTML;
+    return shipHtml;
   }
 }
 

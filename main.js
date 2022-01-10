@@ -1,4 +1,5 @@
-import {Fleet} from "./fleet.js"
+alert('hi')
+import { Fleet } from "./fleet.js"
 const motherShip = new Fleet('motherShip', 1, 100, 9, './img/alien.png', );
 
 const fleetShip = document.querySelector('.enemy-fleet');
@@ -44,12 +45,12 @@ const points = document.querySelectorAll('.points');
     pointsIndex.innerHTML = 0; 
     shipArray.splice(randomNumber, 1)
     alert('Game Over! MotherShip been destroyed');
-     
+     gameEnd();
   } else  if(randomShip.hitPoints <= 0) {
     randomShip.stopPoints();
     pointsIndex.innerHTML = 0;  
-      console.log(shipArray.splice(randomNumber, 1));
-      console.log(pointsIndex.parentNode.removeChild(pointsIndex))
+    shipArray.splice(randomNumber, 1);
+    pointsIndex.parentNode.removeChild(pointsIndex);
       console.log(shipArray.length + ' length of array')
       console.log(points.length)
   } 
@@ -57,7 +58,7 @@ const points = document.querySelectorAll('.points');
 
 const message = document.querySelector('.note');
 
-export const gameEnd = () => {
+const gameEnd = () => {
   if(shipArray.length == 0)
   return message.innerHTML = 'HEY! GAME OVER';   
 }
@@ -71,9 +72,10 @@ const buttonAttack = document.querySelector('.attack-btn');
    reloadGame();
  })
  
- export const reloadGame = () => {
+  const reloadGame = () => {
    if(gameEnd()) {
     document.location.reload(true)
     document.location.reload(false);
    }   
-   }  
+    }  
+  

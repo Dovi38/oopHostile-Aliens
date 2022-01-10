@@ -8,6 +8,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center; 
+  background-color: rgb(180, 123, 123);
 }
 h1 {
   font-family: 'Rubik Beastly', cursive;
