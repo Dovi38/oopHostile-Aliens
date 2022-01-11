@@ -78,4 +78,5 @@ const buttonAttack = document.querySelector('.attack-btn');
     document.location.reload(false);
    }   
     }  
-  
+   //"@babel/core": "^7.16.7",
+  // "@babel/preset-env": "^7.16.8",

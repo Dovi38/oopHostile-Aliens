@@ -2,7 +2,8 @@
   "name": "oop",
   "version": "1.0.0",
   "description": "Game using OOP",
-  "main": "main.js",
+  "main": "main.js", 
+  "type": "module",
   "scripts": {
     "test": "jest"
   },
