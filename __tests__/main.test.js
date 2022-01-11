@@ -1,5 +1,5 @@
 import { SearchSource, TestWatcher } from "jest";
-import {Fleet} from "../module.js";
+import {Fleet} from "../fleet.js";
 
 describe('testing fleet class', () => {
   const prototype = new Fleet('protopyte', 55, 400, 30, './img/alien.png' );

@@ -1,15 +1,25 @@
 {
-  "name": "oop-hostile-aliens",
+  "name": "oop",
   "version": "1.0.0",
-  "description": "build game using oop",
+  "description": "Game using OOP",
   "main": "main.js",
   "scripts": {
     "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dovi38/oopHostile-Aliens.git"
+  },
+  "keywords": [],
   "author": "Dovi",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dovi38/oopHostile-Aliens/issues"
+  },
+  "homepage": "https://github.com/Dovi38/oopHostile-Aliens#readme",
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.16.7",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
     "jest": "^27.4.7"
   }
 }

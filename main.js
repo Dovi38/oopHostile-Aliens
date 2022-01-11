@@ -1,4 +1,4 @@
-alert('hi')
+
 import { Fleet } from "./fleet.js"
 const motherShip = new Fleet('motherShip', 1, 100, 9, './img/alien.png', );
 
