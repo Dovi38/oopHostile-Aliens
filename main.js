@@ -24,49 +24,48 @@ const createFleet = () => {
 }
 createFleet();
 
-console.log(shipArray)
+//console.log(shipArray)
 
 const attack = () => {
   const randomNumber = Math.floor(Math.random() * shipArray.length);
-    console.log(randomNumber + ' random')
+    //console.log(randomNumber + ' random')
   let randomShip = shipArray[randomNumber];
-      console.log(randomShip.id + ' id')
+      //console.log(randomShip.id + ' id')
     randomShip.shipLife();
-      console.log(randomShip)
+      //console.log(randomShip)
 
 const points = document.querySelectorAll('.points');
-    console.log(points)
+    //console.log(points)
   let pointsIndex = points[randomNumber]
     pointsIndex.innerHTML = randomShip.hitPoints;
-      console.log(pointsIndex)
+      //console.log(pointsIndex)
   
-  if(randomShip.type === 'motherShip' && randomShip.hitPoints <= 0) {
+  if(randomShip.type === 'motherShip' && randomShip.hitPoints <= 1) {
     randomShip.stopPoints();
     pointsIndex.innerHTML = 0; 
-    shipArray.splice(randomNumber, 1)
     alert('Game Over! MotherShip been destroyed');
-     gameEnd();
+    shipArray.length = 0;
+     
   } else  if(randomShip.hitPoints <= 0) {
     randomShip.stopPoints();
     pointsIndex.innerHTML = 0;  
     shipArray.splice(randomNumber, 1);
     pointsIndex.parentNode.removeChild(pointsIndex);
-      console.log(shipArray.length + ' length of array')
-      console.log(points.length)
+      //console.log(shipArray.length + ' length of array')
+      //console.log(points.length)
   } 
 }
 
 const message = document.querySelector('.note');
 
 const gameEnd = () => {
-  if(shipArray.length == 0)
+  if(shipArray.length == 0 || shipArray[0].hitPoints === 1)
   return message.innerHTML = 'HEY! GAME OVER';   
 }
 
 const buttonAttack = document.querySelector('.attack-btn');
 
  buttonAttack.addEventListener('click', () => {
-   console.log('button clicked')
    attack();
    gameEnd();
    reloadGame();
@@ -78,5 +77,4 @@ const buttonAttack = document.querySelector('.attack-btn');
     document.location.reload(false);
    }   
     }  
-   //"@babel/core": "^7.16.7",
-  // "@babel/preset-env": "^7.16.8",
+   
